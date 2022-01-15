@@ -11,9 +11,9 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps(context) {
-  console.log('[PostPage] getStaticProps()', context)
-  const post = await getPost('first-post')
+export async function getStaticProps({ params: { slug } }) {
+  console.log('[PostPage] getStaticProps()', slug)
+  const post = await getPost(slug)
   return {
     props: {
       post,
