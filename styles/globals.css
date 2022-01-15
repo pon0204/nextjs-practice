@@ -1,12 +1,29 @@
+/* Light Theme **/
+:root {
+  --background-color: white;
+  --link-color: darkred;
+  --text-color: black;
+}
+
+/* Dark Theme **/
+:root {
+  --background-color: black;
+  --link-color: yellow;
+  --text-color: white;
+}
+
 body {
-  font-family: "Arial";
+  font-family: 'Arial';
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 a {
-  color: darkred;
+  color: var(--link-color);
   text-decoration: none;
 }
 
-a:focus, a:hover{
+a:focus,
+a:hover {
   text-decoration: underline;
 }
